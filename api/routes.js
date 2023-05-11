@@ -3,6 +3,12 @@ import { Passage } from './models';
 
 const router = express.Router();
 
+if (process.env.NODE_ENV == "local") {
+    // initialize fake backend
+} else {
+    
+}
+
 // POST /passages
 // parse request for passage to use for watson and spotify
 // return song recommendation and emotional score of the song

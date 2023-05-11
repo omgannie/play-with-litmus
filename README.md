@@ -1,6 +1,15 @@
 # play-with-litmus
 
-[project](https://play-with-litmus.herokuapp.com).
+## demo!
+*highly suggested* clone this & run locally!
+
+1. in a terminal window, run `npm i` at the root of the project
+2. `npm run serve` to start the server*
+3. in a new terminal window, run `npm start` to start the client
+4. type in `localhost:3000` and see it in action!
+
+*note that for demo purposes we will only persist the fake models during the life of the server
+
 
 ## overview
 
@@ -11,7 +20,7 @@ it takes an input of text, a passage of anything you want and returns an AI-gene
 
 ## tools
 
-this project is built with watson, openai, and spotify on top of a node engine, with react for user-facing components.
+this project is an express app built with watson, openai, and spotify on top of node.js, with react for user-facing components.
 
 ### history
 
