@@ -1,0 +1,1 @@
+export { PassageInput as default } from './PassageInput';
