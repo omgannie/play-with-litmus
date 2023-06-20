@@ -1,1 +1,1 @@
-export { PassageInput as default } from './PassageInput';
+export { default as PassageInput } from './PassageInput';

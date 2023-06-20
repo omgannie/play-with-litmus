@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export const SPOTIFY_TOKEN_URI = 'https://accounts.spotify.com/api/token';
-export const SPOTIFY_API_BASE_URL = 'https://api.spotify.com'
+export const SPOTIFY_API_BASE_URL = 'httpss://api.spotify.com'
 export const SPOTIFY_RECOMMENDATIONS_ENDPOINT = '/v1/recommendations';
 export const SPOTIFY_SEARCH_ENDPOINT = '/v1/search';
 
@@ -61,5 +61,4 @@ export const searchByKeywords = async (keywords) => {
     const filters = keywords.map(() => {})
 }
 
-const recs = await getSongRecommendations(['4NHQUGzhtTLFvgF5SZesLK'], ['classical', 'country'], ['0c6xIDDpzE81m2q797ordA']).then(r => r)
-console.log(recs)
+export const recs = await getSongRecommendations(['4NHQUGzhtTLFvgF5SZesLK'], ['classical', 'country'], ['0c6xIDDpzE81m2q797ordA']).then(r => r)
