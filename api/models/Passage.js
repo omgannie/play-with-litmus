@@ -1,7 +1,7 @@
 import { v4 as uuid } from "uuid";
 import { analyzePassage } from "../services/watson.js";
 
-export default class Passage {
+export class Passage {
     constructor(input) {
         this.uuid = uuid()
         this.text = input.textInput
@@ -9,8 +9,6 @@ export default class Passage {
         this.keywords = null
         this.topics = null
         this.categories = null
-
-        this.populateAnalysis();
     }
 
     async populateAnalysis() {
@@ -28,6 +26,4 @@ export default class Passage {
 
         // use classifications to build emotional score of the passage
     }
-
-
 }

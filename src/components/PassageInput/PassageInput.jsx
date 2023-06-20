@@ -2,11 +2,11 @@ import { useId } from 'react';
 import PropTypes from 'prop-types';
 import './styles.module.css';
 
-export function PassageInput ({ handleSubmit }) {
+export default function PassageInput ({ stepId, onChange, handleSubmit, buttonText }) {
     const passageId = useId();
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form onChange={onChange} onSubmit={handleSubmit}>
             <label>
                 Type or paste in a passage of text to analyze.
             </label>
@@ -15,15 +15,21 @@ export function PassageInput ({ handleSubmit }) {
                 rows={10}
                 cols={300}
             />
-            <button>Analyze This!</button>
+            <button>{buttonText}</button>
         </form>
         )
 }
 
 PassageInput.propTypes = {
-    handleSubmit: PropTypes.func
+    stepId: PropTypes.any,
+    onChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    buttonText: PropTypes.string
 }
 
 PassageInput.defaultProps = {
-    handleSubmit: () => {}
+    stepId: null,
+    onChange: () => {},
+    handleSubmit: () => {},
+    buttonText: "Submit"
 }
